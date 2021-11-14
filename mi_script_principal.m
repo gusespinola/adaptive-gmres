@@ -116,6 +116,7 @@ legend(['A-LGMRES-E(mj,',num2str(d0),',',num2str(l0),'), t=',num2str(t_prom5),'±
      ['GMRES-E(',num2str(mE),',',num2str(dE),'), t=',num2str(t_prom4),'±', num2str(t_std_dev4), 's'],...
      'Location','Northeast');
 
+my_plots_path = 'C:\Users\HP\Documents\GitHub\mi-gmres-results';
 % legend(['GMRES(',num2str(m),'),t=', num2str(t_prom1),'±', num2str(t_std_dev1), 's'],...
 %      'Location','Northeast');
 % 

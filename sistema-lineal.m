@@ -76,4 +76,4 @@ for count=1:M*N
 end
 b = [b;g];
 % Guardar A y b en un archivo .mat    
-save('C:\Users\Gustavo\Google Drive\HPD-GMRES\bin_2017_geem\matrices\cavity09.mat','A','b');
+save('cavity09.mat','A','b');
