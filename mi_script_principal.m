@@ -5,15 +5,15 @@ load 'cavity07.mat';
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Name_Matrix = 'cavity07';
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Only for UFlorida Matrix Market
+% Only for SuiteSparse Matrix Collection
 % A = Problem.A;
 % b = Problem.b(:,1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Parámetros globales
+% Parï¿½metros globales
 itermax = 500; %2000 funciona
 tol = 1e-06;
 end_count = 1;
-% Parámetro de Adaptive-LGMRESE     
+% Parï¿½metro de Adaptive-LGMRESE     
 eps0 = 0.5;
 alpha = 3;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,7 +39,7 @@ metrics_LGMRESE = [t_prom5 t_std_dev5 vec5(2) vec5(3)];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %GMRES(m)
 color='k-';
-m = 30; % El más recomendado: GMRES(30). Cambiar: m=15, m=25, m=30
+m = 30; % El mï¿½s recomendado: GMRES(30). Cambiar: m=15, m=25, m=30
 print=0;
 temp=zeros(end_count,1);
 %fig_GMRES = figure(1);
@@ -57,7 +57,7 @@ metrics_GMRES = [t_prom1 t_std_dev1 vec1(2) vec1(3)];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %GMRES(m_k), m variable
 color='b-';
-m1 = 30; % El más recomendado: GMRES(30). Cambiar: m=15, m=25, m=30
+m1 = 30; % El mï¿½s recomendado: GMRES(30). Cambiar: m=15, m=25, m=30
 print=0;
 temp=zeros(end_count,1);
 for count = 1:end_count
@@ -109,15 +109,15 @@ t_prom4=mean(temp);
 t_std_dev4=std(temp);
 metrics_GMRESE = [t_prom4 t_std_dev4 vec4(2) vec4(3)]; %revisar
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-legend(['A-LGMRES-E(mj,',num2str(d0),',',num2str(l0),'), t=',num2str(t_prom5),'±', num2str(t_std_dev5), 's'],...
-     ['GMRES(',num2str(m),'),t=', num2str(t_prom1),'±', num2str(t_std_dev1), 's'],...
-     ['GMRES(mj),t=', num2str(t_prom6),'±', num2str(t_std_dev6), 's'],...
-     ['LGMRES(',num2str(m1),',',num2str(l1),'), t=',num2str(t_prom2),'±', num2str(t_std_dev2), 's'],...
-     ['GMRES-E(',num2str(mE),',',num2str(dE),'), t=',num2str(t_prom4),'±', num2str(t_std_dev4), 's'],...
+legend(['A-LGMRES-E(mj,',num2str(d0),',',num2str(l0),'), t=',num2str(t_prom5),'ï¿½', num2str(t_std_dev5), 's'],...
+     ['GMRES(',num2str(m),'),t=', num2str(t_prom1),'ï¿½', num2str(t_std_dev1), 's'],...
+     ['GMRES(mj),t=', num2str(t_prom6),'ï¿½', num2str(t_std_dev6), 's'],...
+     ['LGMRES(',num2str(m1),',',num2str(l1),'), t=',num2str(t_prom2),'ï¿½', num2str(t_std_dev2), 's'],...
+     ['GMRES-E(',num2str(mE),',',num2str(dE),'), t=',num2str(t_prom4),'ï¿½', num2str(t_std_dev4), 's'],...
      'Location','Northeast');
 
 my_plots_path = 'C:\Users\HP\Documents\GitHub\mi-gmres-results';
-% legend(['GMRES(',num2str(m),'),t=', num2str(t_prom1),'±', num2str(t_std_dev1), 's'],...
+% legend(['GMRES(',num2str(m),'),t=', num2str(t_prom1),'ï¿½', num2str(t_std_dev1), 's'],...
 %      'Location','Northeast');
 % 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
