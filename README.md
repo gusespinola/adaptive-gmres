@@ -4,7 +4,7 @@ In this repository, an adaptive version of the restarted GMRES (GMRES(m)) is int
 
 ## Instructions
 
-- Run `mi_script_principal.m` for a simple comparative test (compiutational time, number of iterations) between different iterative methods. Line 4: `load 'cavity07.mat';` and 6: `Name_Matrix = 'cavity07';` are suitable for change.
+- Run `mi_script_principal.m` for a simple comparative test (compiutational time, number of iterations) between different iterative methods. Line 4: `load 'cavity07.mat';` and 6: `Name_Matrix = 'cavity07';` are suitable for changes (see available `.mat` data).
 - Tweak `sistema-lineal.m` to change the discretization parameters.
 
 ## Reference
